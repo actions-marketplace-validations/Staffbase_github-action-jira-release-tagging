@@ -17,6 +17,7 @@
     "@actions/core": "3.0.1"
   },
   "resolutions": {
+    "browserslist": "4.28.7",
     "glob": "11.1.0",
     "@atlassian-partner-engineering/eslint-config/**/brace-expansion": "1.1.16",
     "jest/**/brace-expansion": "1.1.16",
@@ -27,7 +28,7 @@
   "devDependencies": {
     "@atlassian-partner-engineering/eslint-config": "5.2.0",
     "@vercel/ncc": "0.45.0",
-    "eslint": "10.8.0",
+    "eslint": "10.9.1",
     "jest": "30.4.2",
     "jest-junit": "17.0.0",
     "nock": "15.0.0"
