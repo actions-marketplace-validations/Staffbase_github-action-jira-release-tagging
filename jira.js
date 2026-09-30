@@ -99,4 +99,4 @@ class Jira {
   }
 }
 
-module.exports = Jira;
+export default Jira;

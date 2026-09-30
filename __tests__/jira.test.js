@@ -1,4 +1,4 @@
-const Jira = require('../jira')
+import Jira from '../jira.js'
 
 // if you want to run the test locally, add an existing JIRA token and email to the new JIRA call
 xtest('foo', async () => {

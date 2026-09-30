@@ -1,4 +1,4 @@
-const action = require('../action');
+import * as action from '../action.js';
 
 test('action#filterIssueIds empty', () => {
   const result = action.filterIssueIds('"PAC-1001", "PAC-00", "PAC-000000000", "PAC-000", "PAC-0000", ""RE-123","",,"LOL-333", NO-1234, COD-98765');

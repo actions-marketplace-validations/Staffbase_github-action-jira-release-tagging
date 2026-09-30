@@ -3,8 +3,9 @@
   "version": "1.7.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "NODE_ENV=testing jest __tests__",
+    "test": "NODE_ENV=testing NODE_OPTIONS=--experimental-vm-modules jest __tests__",
     "build": "NODE_OPTIONS=--openssl-legacy-provider ncc build index.js --minify",
     "watch": "ncc build index.js --watch --minify",
     "release-major": "npm version major -m \":bookmark: Release (major): %s\"",

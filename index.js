@@ -1,4 +1,4 @@
-const action = require('./action')
+import * as action from './action.js'
 
 const args = action.parseArgs()
 

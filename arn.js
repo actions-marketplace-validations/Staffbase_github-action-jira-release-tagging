@@ -19,4 +19,4 @@ class Arn {
   }
 }
 
-module.exports = Arn;
+export default Arn;

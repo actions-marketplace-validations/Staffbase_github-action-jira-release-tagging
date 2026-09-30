@@ -1,6 +1,6 @@
-const core = require('@actions/core');
-const Arn = require('./arn');
-const Jira = require('./jira');
+import * as core from '@actions/core';
+import Arn from './arn.js';
+import Jira from './jira.js';
 
 const jira = new Jira({
   baseUrl: process.env.JIRA_BASEURL,
@@ -69,4 +69,4 @@ function filterIssueIds(issueIdsStr) {
   return filtered
 }
 
-module.exports = { exec, parseArgs, filterIssueIds };
+export { exec, parseArgs, filterIssueIds };
