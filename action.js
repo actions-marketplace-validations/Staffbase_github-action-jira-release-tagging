@@ -15,7 +15,7 @@ const arn = new Arn({webhookUrl});
 // 1. update JIRA issues
 // 2. send a webhook to the ARN (Automated release notes) - JIRA app -
 //    with the componentName-tagName label
-async function exec ({ issueIds, componentName, tagName, releaseDate }) {
+async function exec ({ issueIds, componentName, tagName, releaseDate, notifyUsers }) {
   try {
     console.log({ issueIds, componentName, tagName, releaseDate });
 
@@ -30,6 +30,7 @@ async function exec ({ issueIds, componentName, tagName, releaseDate }) {
       componentName,
       tagName,
       releaseDate,
+      notifyUsers,
     });
 
     if (errors.length === 0) {

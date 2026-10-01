@@ -40,15 +40,17 @@ class Jira {
       try {
         const issue = await this.getIssueOrSubtaskParentIssue(issueId);
 
+        let issueReleaseDate = releaseDate;
+
         if (issue.fields.customfield_11108) {
           const oldReleaseDate = new Date(issue.fields.customfield_11108);
 
-          if (oldReleaseDate > releaseDate) {
-            releaseDate = oldReleaseDate
+          if (oldReleaseDate > issueReleaseDate) {
+            issueReleaseDate = oldReleaseDate
           }
         }
 
-        await this.updateIssue({ issue, releaseDate, tagName, componentName, notifyUsers });
+        await this.updateIssue({ issue, releaseDate: issueReleaseDate, tagName, componentName, notifyUsers });
 
         return null
       } catch (ex) {
